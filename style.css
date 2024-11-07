@@ -27,7 +27,7 @@ html {
 }
 * {
     box-sizing: border-box;
-    font-family: "Barlow Condensed", serif;
+    font-family: "Lexend", sans-serif;
 
 }
 body {
@@ -611,6 +611,15 @@ li {
         flex-wrap: wrap;
     }
 }
+@media screen and (max-width:767px) {
+    .commitment-wrapper{
+        flex-direction: column-reverse;
+    }
+    .commitment-content{
+        width: 90% ;
+        text-align: center;
+    }
+}
 
 /* commitnennts-section end */
 
@@ -640,6 +649,7 @@ li {
     margin-top: 15px;
     letter-spacing: 1.5px;
     color: var(--primary-color);
+    font-size: 1.2rem;
 }
 .steps-btn-container{
     display: flex;
