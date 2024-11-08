@@ -142,22 +142,47 @@ li {
     background-color: var(--white-font);
     border-color: var(--blue1);
 }
+/* .css-selector {
+    background: linear-gradient(270deg, #66d4ff, #c0ffae, #ffb0b0, #fff4b0, #ffd9b0);
+    background-size: 1000% 1000%;
 
-.gradient-border {
-    position: relative; /* Adjust padding as needed */
-    border: none; /* Optional for rounded borders */
-}
-.gradient-border::before {
-    content: "";
-    position: absolute;
-    top: -2px; left: -2px; right: -2px; bottom: -2px;
-    z-index: -1;
-    /* background: rgb(140,66,29); */
-    background:var(--border-gredient) ;
-    border-radius: inherit;
-    background-clip: border-box; /* Important for clipping gradient to the border */
-}
+    -webkit-animation: AnimationName 3s ease infinite;
+    -moz-animation: AnimationName 3s ease infinite;
+    animation: AnimationName 3s ease infinite;
+} */
+ .gradient-bg{
+    background-color:hsla(0,0%,80%,1);
+    background-image:
+    radial-gradient(at 0% 0%, hsla(195,100%,73%,0.86) 0px, transparent 50%),
+    radial-gradient(at 0% 99%, hsla(105,100%,86%,0.87) 0px, transparent 50%),
+    radial-gradient(at 49% 1%, hsla(0,92%,74%,1) 0px, transparent 50%),
+    radial-gradient(at 100% 6%, hsla(48,93%,80%,1) 0px, transparent 50%),
+    radial-gradient(at 100% 99%, hsla(25,100%,81%,1) 0px, transparent 50%),
+    radial-gradient(at 51% 99%, hsla(266,83%,60%,1) 0px, transparent 50%),
+    radial-gradient(at 44% 31%, hsla(343,100%,76%,1) 0px, transparent 50%);
+    background-size: 150% 150%;
+    animation: my_animation 10s ease infinite;
+ }
 
+
+
+@keyframes my_animation {
+    0% {
+        background-position: 0% 0%;
+    }
+    25% {
+        background-position: 100% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
 /* navbar section */
 .navbar-section {
     display: flex;
@@ -312,14 +337,14 @@ li {
 .hero-section{
     position: relative;
     height: calc(100vh - 100px);
-    background-image: url(./assets/homepage-hero-bg.png);
-    background-position: center left;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+    /* background-image: url(./assets/homepage-hero-bg.png); */
+   
     width: 100%;
     min-height: 400px;
     overflow: hidden;
 }
+
 
 
 .hero-container{
@@ -461,8 +486,9 @@ li {
     display: block;
     font-size: 3rem;
 }
-.about-content p{
-    font-size: 12px;
+
+.about-section{
+    margin-block: 10%;
 }
 }
 /* about section end */
@@ -475,7 +501,6 @@ li {
 .section-subtitle{
     font-size: 1.5rem;
     color: var(--white-font);
-    margin-top: -20px;
     margin-bottom: 3rem;
     text-align: center;
 }
@@ -533,6 +558,10 @@ li {
         width: 100%;
         margin-block: 30px;
     }
+    .services-section
+    {
+        margin-block: 10%;
+    }
     
 }
 
@@ -550,16 +579,18 @@ li {
     color: var(--violvet);
 
 }
+@media screen and (max-width:600px) {
+    .types-section{
+        margin-block: 10%;
+    }
+}
 /* types-section end */
 
 /* contact-section */
 .contact-section{
     margin-block: 5%;
     padding-block: 5%;
-    background-image: url(./assets/contactus-bg.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+   
     color: var(--black-font);
 }
 .contact-section p{
@@ -572,6 +603,14 @@ li {
     margin-bottom: 20px;
      font-size: 2rem;
 }
+@media screen and (max-width:600px) {
+    .contact-section{
+        margin-block: 10%;
+        padding-block:20%;
+    }
+    
+}
+
 /* contact-section end */
 
 /* commitnennts-section */
@@ -617,8 +656,13 @@ li {
     }
     .commitment-content{
         width: 90% ;
-        text-align: center;
     }
+}
+@media screen and (max-width:600px) {
+    .commitment-section{
+        margin-block: 10%;
+    }
+    
 }
 
 /* commitnennts-section end */
@@ -631,13 +675,14 @@ li {
 .steps-wrapper{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 .steps{
     width: calc(20% - 20px);
     text-align: center;
+    margin-block: 20px;
 }
 .steps img{
     /* width: 100px; */
@@ -649,14 +694,14 @@ li {
     margin-top: 15px;
     letter-spacing: 1.5px;
     color: var(--primary-color);
-    font-size: 1.2rem;
+    font-size: 1.2rem ;
 }
 .steps-btn-container{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 40px;
     gap: 20px;
 }
 .steps-btn-container :nth-child(1){
@@ -683,9 +728,12 @@ li {
         margin-block: 20px;
     }
 }
-@media screen and (max-width:500px) {
+@media screen and (max-width:600px) {
     .steps{
         width: 100%;
+    }
+    .steps-section{
+        margin-block: 10%;
     }
 }
 
@@ -831,7 +879,7 @@ footer{
 
 .footer-item h3{
     /* width: min-content; */
-    color: var(--red);
+    color: var(--primary-color);
     font-size: 25px;
     margin-bottom: 10px;
     font-weight: 500;
@@ -969,10 +1017,7 @@ footer{
 .copyright-container{
     
     margin-inline: auto;
-    background-image: url(assets/contactus-bg.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+ 
     text-align: center;
     padding-block: 20px;
     font-size: 14px;
